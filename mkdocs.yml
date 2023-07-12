@@ -12,7 +12,7 @@ theme:
     - navigation.tabs                             # dieses feature erstellt eine Navigationsbar am oberen Rand der Dokumentation
     - navigation.footer
     - navigation.sections
-    - toc.integrate                       				# wenn der table of content auf der rechten Seite sein soll, das entfernen
+    - toc.integrate                               # wenn der table of content auf der rechten Seite sein soll, das entfernen
     - navigation.top
     - search.suggest
     - search.highlight
@@ -22,13 +22,13 @@ theme:
   language: en
   palette:
     - scheme: default
-      toggle:                                         	# durch den toggle tag kann man zum dark mode switchen
+      toggle:                                     # durch den toggle tag kann man zum dark mode switchen
         icon: material/toggle-switch-off-outline 
         name: Switch to dark mode
       primary: deep orange
       accent: purple 
     - scheme: slate 
-      toggle:                                         	# durch den toggle tag kann man zum white mode switchen
+      toggle:                                     # durch den toggle tag kann man zum white mode switchen
         icon: material/toggle-switch
         name: Switch to light mode    
       primary: deep orange
@@ -66,14 +66,15 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - footnotes
-  - pymdownx.details                				# hierdurch werden die aufklappbaren Boxen erstellt
-  - pymdownx.superfences            				# hierdurch werden Code Block generiert
-  - pymdownx.tabbed:                				# Hierüber lassen sich die Tabs bei Code Beispielen aktivieren
+  - pymdownx.details                              # hierdurch werden die aufklappbaren Boxen erstellt
+  - pymdownx.superfences                          # hierdurch werden Code Block generiert
+  - pymdownx.tabbed:                              # Hierüber lassen sich die Tabs bei Code Beispielen aktivieren
       alternate_style: true 
   - pymdownx.mark
 
 # Page tree
 nav:
+  - External Link: "https://seatable.io/"         # wir können in der Navigation Bar auch auf einen External Link verweisen
   - Overview: README.md
   - Basic Setup:
     - Developer Edition: docker/Developer-Edition/Deploy SeaTable-DE with Docker.md
