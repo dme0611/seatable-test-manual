@@ -1,5 +1,7 @@
 # Authentication overview
 
+Latest Version
+
 SeaTable Server Enterprise Edition (SeaTable) supports multiple authentication types.
 
 The default authentication type is authentication against the local user database (with or without [two-factor authentication](two_factor_auth.md)).
