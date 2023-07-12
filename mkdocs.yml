@@ -9,7 +9,7 @@ theme:
   #favicon: media/seatable-favicon.ico
 
   features:
-    - navigation.tabs                     				# dieses feature erstellt eine Navigationsbar am oberen Rand der Dokumentation
+    - navigation.tabs                             # dieses feature erstellt eine Navigationsbar am oberen Rand der Dokumentation
     - navigation.footer
     - navigation.sections
     - toc.integrate                       				# wenn der table of content auf der rechten Seite sein soll, das entfernen
