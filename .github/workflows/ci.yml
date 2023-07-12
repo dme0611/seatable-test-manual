@@ -20,7 +20,7 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - name: install
+      - name: Install Requirements
         run: pip install -r requirements.txt
       - run: git pull
       - run: git fetch origin gh-pages --depth=1
