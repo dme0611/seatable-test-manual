@@ -1,6 +1,6 @@
 # Authentication overview
 
-Latest Version
+Version 1.0
 
 SeaTable Server Enterprise Edition (SeaTable) supports multiple authentication types.
 
