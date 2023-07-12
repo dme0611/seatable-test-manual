@@ -1,0 +1,6 @@
+mkdocs-material
+mkdocs-material-extensions
+mkdocs-redirects
+pillow 
+cairosvg
+mike

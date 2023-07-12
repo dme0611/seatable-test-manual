@@ -1,0 +1,135 @@
+site_name: SeaTable Manual
+
+repo_name: seatable/seatable-admin-docs
+repo_url: https://github.com/seatable/seatable-admin-docs/
+
+theme:
+  name: material
+  #logo: media/SeaTable256-256.png
+  #favicon: media/seatable-favicon.ico
+
+  features:
+    - navigation.tabs                     # dieses feature erstellt eine Navigationsbar am oberen Rand der Dokumentation
+    - navigation.footer
+    - navigation.sections
+    - toc.integrate                       # wenn der table of content auf der rechten Seite sein soll, das entfernen
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:                                         # durch den toggle tag kann man zum dark mode switchen
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: deep orange
+      accent: purple 
+    - scheme: slate 
+      toggle:                                         # durch den toggle tag kann man zum white mode switchen
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: deep orange
+      accent: lime
+
+
+plugins:
+  - social
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://de.linkedin.com/company/seatable/
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@seatable
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/seatable.io
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/SeaTableIO    
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/seatable
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCnkzwl8TED0AWo9QCjZv1cA
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/seatable/seatable-enterprise
+  version:
+    provider: mike
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details                # hierdurch werden die aufklappbaren Boxen erstellt
+  - pymdownx.superfences            # hierdurch werden Code Block generiert
+  - pymdownx.tabbed:                # Hierüber lassen sich die Tabs bei Code Beispielen aktivieren
+      alternate_style: true 
+  - pymdownx.mark
+
+
+# Page tree
+nav:                                # hierüber lassen lässt sich die Struktur der Navigationsbar regeln
+  - External Link: "https://seatable.io/"       # wir können in der Navigation Bar auch auf einen External Link verweisen
+  - Overview: README.md
+  - Basic Setup:
+    - Developer Edition: docker/Developer-Edition/Deploy SeaTable-DE with Docker.md
+    - Enterprise Edition: docker/Enterprise-Edition/Deploy SeaTable-EE with Docker.md
+    - Python Runner:
+      - Deploy: docker/Python-Runner/Deploy SeaTable Python Runner.md
+      - Upgrading: docker/Python-Runner/Update SeaTable Python Runner.md
+      - Customization: docker/Python-Runner/Customize SeaTable Python Runner.md
+    - Migrate SeaTable DE to EE: docker/Enterprise-Edition/migrate_from_seatable_ce_server.md
+  - Advanced Setup (SeaTable EE):
+    - Roles and Permissions: config/enterprise/roles_permissions.md
+    - S3: config/enterprise/S3.md
+    - OnlyOffice: config/enterprise/deploy_onlyoffice_docker.md
+    - Cluster:
+      - Cluster: docker/Cluster/SeaTable Cluster.md
+      - dtable-db Standalone: docker/Cluster/dtable-db Standalone.md
+      - dtable-events Background node: docker/Cluster/dtable-events Background node.md
+      - dtable-server Cluster: docker/Cluster/dtable-server Cluster.md
+  - Authentication:
+    - Overview: authentication/auth_overview.md
+    - 2FA: authentication/two_factor_auth.md
+    - LDAP: authentication/ldap.md
+    - OAuth: authentication/oauth.md
+    - SAML: authentication/saml.md
+    - JWT: authentication/jwt.md
+    - Switch authentication: authentication/auth_switch.md
+  - Customization:
+    - Autostart: config/autostart.md
+    - Configuration:
+      - ccnet.conf: config/ccnet-conf.md
+      - dtable-db.conf: config/dtable_db_conf.md
+      - dtable-events.conf: config/dtable-events-conf.md
+      - dtable_server_config: config/dtable_server_config.md
+      - dtable-storage-server.conf: config/dtable_storage_server_conf.md
+      - dtable_web_settings.py: config/dtable_web_settings.md
+      - seafile.conf: config/seafile-conf.md
+      - seatable-controller.conf: config/seatable-controller-conf.md
+    - Custom CSS: config/custom_css.md
+    - Email Sending: config/sending_email.md
+    - Base Rows Limit: config/base_rows_limit.md
+    - Seafile Integration: config/integrate-with-seafile.md
+    - Templates and Manual: config/templates_and_manual.md
+  - Maintenance:
+    - Backup and Recovery: maintain/backup_recovery.md
+    - Clean Database: maintain/clean_database.md
+    - Clean Storage: maintain/seatable_gc.md
+    - Others: maintain/others.md
+  - Upgrade:
+    - Upgrade Manual: upgrade/upgrade_manual.md
+    - Extra Upgrade Notices: upgrade/extra-upgrade-notice.md
+  - ChangeLog: changelog/server-changelog.md
+  - System Limitations: limitations/system_limitations.md
+  - dtable-server-license: dtable-server-license.md
+
+extra_css:
+  - stylesheets/extra.css
