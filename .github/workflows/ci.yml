@@ -22,7 +22,6 @@ jobs:
             mkdocs-material-
       - name: Install Requirements
         run: pip install -r requirements.txt
-      - run: git pull
       - run: git fetch origin gh-pages --depth=1
       - run: git config user.name ci-bot
       - run: git config user.email ci-bot@example.com
